@@ -1,0 +1,3 @@
+/home/guilhermerwn2004/md-cpp/build/CMakeFiles/md_cpp.dir
+/home/guilhermerwn2004/md-cpp/build/CMakeFiles/edit_cache.dir
+/home/guilhermerwn2004/md-cpp/build/CMakeFiles/rebuild_cache.dir
