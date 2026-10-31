@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/guilhermerwn2004/md-cpp/build",
+  "command": "/usr/bin/g++ -I/usr/include/hdf5/serial -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -g -std=gnu++17 -o CMakeFiles/md_cpp.dir/src/main.cpp.o -c /home/guilhermerwn2004/md-cpp/src/main.cpp",
+  "file": "/home/guilhermerwn2004/md-cpp/src/main.cpp",
+  "output": "CMakeFiles/md_cpp.dir/src/main.cpp.o"
+}
+]

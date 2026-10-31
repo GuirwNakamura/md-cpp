@@ -1,0 +1,99 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C++: build active file",
+            "type": "shell",
+            "command": "/usr/bin/g++-14",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-std=c++23",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": { "cwd": "${fileDirname}" },
+            "problemMatcher": ["$gcc"],
+            "group": "build"
+        },
+        {
+            "label": "C++: build folder",
+            "type": "shell",
+            "command": "/usr/bin/g++-14 -fdiagnostics-color=always -std=c++23 -g *.cpp -o \"${fileDirname}/${fileDirnameBasename}\"",
+            "options": { "cwd": "${fileDirname}" },
+            "problemMatcher": ["$gcc"],
+            "group": "build"
+        },
+        {
+            "label": "C++: run active file",
+            "type": "shell",
+            "command": "${fileDirname}/${fileBasenameNoExtension}",
+            "dependsOn": "C++: build active file",
+            "options": { "cwd": "${fileDirname}" },
+            "presentation": { "reveal": "always", "panel": "dedicated", "clear": true },
+            "problemMatcher": [],
+            "group": "test"
+        },
+        {
+            "label": "C++: run folder",
+            "type": "shell",
+            "command": "${fileDirname}/${fileDirnameBasename}",
+            "dependsOn": "C++: build folder",
+            "options": { "cwd": "${fileDirname}" },
+            "presentation": { "reveal": "always", "panel": "dedicated", "clear": true },
+            "problemMatcher": [],
+            "group": "test"
+        },
+        {
+            "label": "Fortran: build active file",
+            "type": "shell",
+            "command": "/usr/bin/gfortran-14",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": { "cwd": "${fileDirname}" },
+            "problemMatcher": ["$gcc"],
+            "group": "build"
+        },
+        {
+            "label": "Fortran: build folder",
+            "type": "shell",
+            "command": "/usr/bin/gfortran-14 -g *.f90 -o \"${fileDirname}/${fileDirnameBasename}\"",
+            "options": { "cwd": "${fileDirname}" },
+            "problemMatcher": ["$gcc"],
+            "group": "build"
+        },
+        {
+            "label": "Fortran: run active file",
+            "type": "shell",
+            "command": "${fileDirname}/${fileBasenameNoExtension}",
+            "dependsOn": "Fortran: build active file",
+            "options": { "cwd": "${fileDirname}" },
+            "presentation": { "reveal": "always", "panel": "dedicated", "clear": true },
+            "problemMatcher": [],
+            "group": "test"
+        },
+        {
+            "label": "Fortran: run folder",
+            "type": "shell",
+            "command": "${fileDirname}/${fileDirnameBasename}",
+            "dependsOn": "Fortran: build folder",
+            "options": { "cwd": "${fileDirname}" },
+            "presentation": { "reveal": "always", "panel": "dedicated", "clear": true },
+            "problemMatcher": [],
+            "group": "test"
+        },
+        {
+            "label": "Mixed: C++ and Fortran build",
+            "type": "shell",
+            "command": "/usr/bin/gfortran-14 -g -c *.f90 && /usr/bin/g++-14 -fdiagnostics-color=always -std=c++23 -g *.cpp *.o -lgfortran -o app_mixed",
+            "options": { "cwd": "${workspaceFolder}" },
+            "problemMatcher": ["$gcc"],
+            "group": "build"
+        }
+    ]
+}

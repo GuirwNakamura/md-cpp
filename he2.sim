@@ -1,0 +1,12 @@
+# Test file for personal MD project, LAMMPS-like format
+
+system
+# energy, ax, bx, cx,  ay, by, cy,  az, bz, cz, pxx, pyy, pzz, pxy, pyz, pzx
+
+atoms # number, FF type, charge, positions x y z, velocities vx vy vz, force fx fy fz
+number, ff_type, charge, x, y, z #, vx, vy, vz, fx, fy, fz
+1 He 0 0.0 0.0 0.0 
+2 He 0 1.0 0.0 0.0
+
+bonds
+1 2

@@ -1,0 +1,5 @@
+// Helium Dimer File
+2
+Lattice="" PBC="F F F" Stress="" Energy=0 Properties=species:S:1:pos:R:3:velocity:R:3:force:R:3
+He 
+He 

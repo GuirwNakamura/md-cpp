@@ -1,0 +1,15 @@
+Force field test file for He and H2O systems. Stores atoms with their connectivity and run algorithm to determine other parameters
+
+nodes
+name,   mass,   charge, sigma,  epsilon,chi,    eta
+He      4.003   0.000   2.640   0.021   12.300  12.300
+H_F3C   1.008   0.410   0.000   0.000   0.000   0.000
+O_F3C   15.999  -0.820  3.150   0.152   8.500   6.200
+
+edges
+ai,     aj,     func,   r0,     kr
+H_F3C   O_F3C   harm    0.957   550.000
+
+angles
+ai,     aj,     ak,     func,   r0,     kr
+H_F3C   O_F3C   H_F3C   harm    104.500 35.000

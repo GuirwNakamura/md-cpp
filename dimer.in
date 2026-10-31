@@ -1,0 +1,25 @@
+#Custom format .in file for MD simulation
+# units of election volt, Kelvin, femtosecond, Angstrom, Angstrom/fs, 
+# everytime a keyword is called, the corresponding parameter is overwritten
+# trj exported as extxyz
+
+system he2.sim
+pbc t t f
+box 10 10 10
+wall 0 0 10
+
+set heating_procedure
+trj 10
+thermo 10
+timestep 0.5
+velocity 50
+ensemble NVE
+ramp 50 300
+start 1000
+
+set molecule_test
+trj 10
+thermo 10
+# timestep 0.5
+ensemble NVT
+start 10000
